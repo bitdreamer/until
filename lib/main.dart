@@ -34,6 +34,7 @@ class Until1 extends StatelessWidget
     return MaterialApp
     (
       title: 'until',
+      debugShowCheckedModeBanner: false,
       home: BlocProvider<MsgCubit>
       ( create: (context) => MsgCubit(),
         child: BlocBuilder<MsgCubit,MsgState>
@@ -56,7 +57,7 @@ class Until2 extends StatelessWidget
   Future<void> whatTime( BuildContext context ) async
   {
     DateTime now = DateTime.now();
-    DateTime inaug = DateTime.parse("2029-01-20 17:00:00Z");
+    DateTime inaug = DateTime.parse("2029-01-20 12:00:00Z");
 
     final diff = inaug.difference(now);
 
@@ -68,7 +69,9 @@ class Until2 extends StatelessWidget
     final td = diff.inDays;
     final h = th - td*24;
 
-    final msg = "${td} days\n$h:$m:$s";
+    String amin = m<10?"0":"";
+    String asec = s<10?"0":"";
+    final msg = "${td} days\n$h:$amin$m:$asec$s";
 
     await Future.delayed( const Duration(seconds:1) ); 
 
