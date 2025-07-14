@@ -57,7 +57,7 @@ class Until2 extends StatelessWidget
   Future<void> whatTime( BuildContext context ) async
   {
     DateTime now = DateTime.now();
-    DateTime inaug = DateTime.parse("2029-01-20 12:00:00Z");
+    DateTime inaug = DateTime.parse("2029-01-20 17:00:00Z");
 
     final diff = inaug.difference(now);
 
@@ -87,7 +87,7 @@ class Until2 extends StatelessWidget
     MsgCubit mc = BlocProvider.of<MsgCubit>(context);
 
     return Scaffold
-    ( // appBar: AppBar( title: Text("until"),),
+    ( appBar: AppBar( title: Text("until"),),
       body: Center
       ( child: Text(mc.state.msg, style:TextStyle(fontSize:30) ),),
     );
