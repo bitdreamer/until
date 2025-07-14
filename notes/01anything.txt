@@ -1,0 +1,15 @@
+01 anything
+
+This app is net.totallylikewhatever.until or 'totally like whatever until'.
+
+It runs XCode (iOS simulator) and other places (Flutter).
+
+It show the time until inauguration 2029.  
+
+I managed to renew my Apple Developer account and register
+this add (names above).  
+
+Next stop: build and 'archive' in XCode and upload it.
+2025 Jul 14 I beat my brains out for a while trying to get the 
+Archive to build.  There's a reason I do not face this often.
+
